@@ -34,6 +34,14 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/api/status", (req, res) => {
+    res.json({
+        bandwidth,
+        quality,
+        status
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);
 });
